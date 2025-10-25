@@ -1,272 +1,315 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Comparatif Cadeau : Casques Bluetooth JBL — autonomie, confort et qualité audio</title>
-  <meta name="description" content="Comparatif Cadeau vous présente les meilleurs casques Bluetooth JBL pour adolescents — autonomie, confort et qualité audio 2025.">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background: #000;
-      color: #fff;
-      line-height: 1.6;
-    }
-    h1, h2, h3 { font-weight: 700; }
-    h1 { text-align: center; color: #fff; margin-top: 40px; }
-    .highlight { color: #d21a28; }
-    .container {
-      width: 95%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    .intro {
-      text-align: center;
-      font-size: 1.2rem;
-      margin: 30px 0;
-    }
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Comparatif Casques Bluetooth — Spécial Ado</title>
+<meta name="description" content="Comparatif Casques Bluetooth — sélection ado. Entre 40€ et 70€.">
+<style>
+  :root{
+    --bg:#000;
+    --card:#0b0b0b;
+    --accent:#d21a28;
+    --muted:#cfcfcf;
+    --maxw:1200px;
+    --radius:12px;
+  }
+  /* Reset léger */
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+    background:var(--bg);
+    color:#fff;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    line-height:1.45;
+  }
 
-    /* Cartes Produits */
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 40px;
-    }
-    .card {
-      background: #fff;
-      color: #000;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      width: 260px;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      text-align: center;
-      transition: transform 0.2s ease-in-out;
-    }
-    .card:hover { transform: translateY(-5px); }
-    .card img {
-      width: 140px;
-      height: 140px;
-      object-fit: contain;
-      margin: 0 auto 15px;
-    }
-    .card h3 { margin: 10px 0; }
-    .card ul { text-align: left; margin: 0 auto; padding: 0; list-style-type: disc; }
-    .card li { margin-left: 20px; }
-    .btn {
-      background: #d21a28;
-      color: #fff;
-      padding: 10px 14px;
-      border: none;
-      border-radius: 5px;
-      font-weight: bold;
-      text-decoration: none;
-      text-transform: uppercase;
-      display: inline-block;
-      margin-top: 15px;
-    }
-    .btn:hover { background: #a51420; }
+  .wrap{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:28px;
+  }
 
-    /* Accordéon */
-    .accordion {
-      margin-top: 60px;
-      background: #fff;
-      color: #000;
-      border-radius: 8px;
-      overflow: hidden;
-      padding: 15px;
-    }
-    .accordion details {
-      border-bottom: 1px solid #ccc;
-      padding: 10px 0;
-    }
-    .accordion summary {
-      font-weight: bold;
-      cursor: pointer;
-      outline: none;
-    }
-    .accordion summary:hover {
-      color: #d21a28;
-    }
-    .accordion p, .accordion ul {
-      margin-left: 20px;
-    }
+  /* HERO */
+  .hero{
+    display:flex;
+    gap:20px;
+    align-items:center;
+    margin-bottom:8px;
+  }
+  .logo{
+    width:150px;
+    height:auto;
+    object-fit:contain;
+  }
+  h1{font-size:30px;margin:0 0 6px 0;line-height:1.05}
+  .subtitle{color:var(--muted);margin:6px 0 0 0;font-size:15px}
 
-    /* Guide d'achat */
-    .guide {
-      background: #fff;
-      color: #000;
-      border-radius: 8px;
-      padding: 25px;
-      margin-top: 50px;
-    }
-    .guide h2 {
-      color: #d21a28;
-      margin-bottom: 15px;
-    }
+  /* Intro */
+  .intro{margin:18px 0 28px;color:var(--muted);font-size:16px;max-width:920px}
 
-    /* Boutons bas de page */
-    .bottom-buttons {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-top: 50px;
-    }
-    .bottom-buttons .btn {
-      background: #d21a28;
-      color: #fff;
-      padding: 12px 20px;
-      border-radius: 6px;
-      font-weight: bold;
-      text-transform: uppercase;
-    }
+  /* GRID CARDS */
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+    margin-bottom:28px;
+  }
+  .card{
+    background:var(--card);
+    border-radius:var(--radius);
+    padding:12px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.4);
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    min-height:430px;
+  }
+  .thumb{
+    width:100%;
+    height:210px;
+    border-radius:8px;
+    background:#080808;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+  }
+  .thumb img{max-width:100%; max-height:100%; object-fit:contain; display:block}
 
-    footer {
-      text-align: center;
-      font-size: 14px;
-      opacity: 0.7;
-      margin: 40px 0;
-    }
+  .card-body{padding:10px 6px 0 6px;flex:1;display:flex;flex-direction:column;align-items:center}
+  .brand{color:var(--muted);font-weight:700;font-size:14px;text-align:center}
+  .prod{font-size:18px;text-align:center;margin:6px 0 6px 0}
+  .rating{color:#f3cc00;margin:6px 0}
+  .price-label{font-size:13px;color:var(--muted);margin-top:6px}
+  .price{font-weight:800;font-size:22px;margin:6px 0}
+  .specs{align-self:stretch;margin-top:6px}
+  .specs ul{margin:8px 0 0 18px;padding:0;color:var(--muted)}
+  .cta{margin-top:auto;text-align:center;padding-top:8px}
+  .btn{
+    display:inline-block;padding:10px 14px;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;border:2px solid rgba(255,255,255,0.06)
+  }
 
-    /* Responsive */
-    @media (max-width: 1024px) {
-      .cards { justify-content: center; }
-      .card { width: 45%; }
-    }
-    @media (max-width: 600px) {
-      .card { width: 100%; }
-    }
-  </style>
+  /* TITRE SECTIONS */
+  .section-title{font-size:28px;color:#fff;margin:18px 0 12px 0}
+  .muted-box{background:#060606;padding:14px;border-radius:10px;margin-bottom:18px;color:var(--muted)}
+
+  /* ACCORDIONS (DETAIL) */
+  details{
+    background:#0b0b0b;border-radius:10px;padding:12px;margin-bottom:10px;border:1px solid rgba(255,255,255,0.03)
+  }
+  summary{
+    cursor:pointer;list-style:none;font-weight:700;font-size:16px;
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  summary::-webkit-details-marker{display:none}
+  .chev{color:var(--muted);font-size:14px}
+  .accordion-body{margin-top:8px;color:var(--muted)}
+
+  /* GRID lower cards (category shortcuts) */
+  .shortcuts{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px}
+  .shortcut{background:var(--accent);padding:20px;border-radius:10px;text-align:center;color:#fff;font-weight:700}
+
+  /* Winner box */
+  .winner{background:#0b0b0b;padding:14px;border-radius:10px;margin-top:10px;color:var(--muted)}
+
+  /* responsive */
+  @media(max-width:1100px){
+    .grid{grid-template-columns:repeat(2,1fr)}
+    .shortcuts{grid-template-columns:repeat(2,1fr)}
+  }
+  @media(max-width:560px){
+    .hero{flex-direction:column;align-items:flex-start}
+    .grid{grid-template-columns:1fr}
+    .shortcuts{grid-template-columns:1fr}
+    h1{font-size:22px}
+  }
+</style>
 </head>
 <body>
+  <div class="wrap">
 
-  <div class="container">
-    <h1>Comparatif : les meilleurs casques Bluetooth — confort, autonomie et qualité audio</h1>
+    <!-- HERO -->
+    <div class="hero">
+      <!-- remplace src par ton logo sur GitHub -->
+      <img class="logo" src="../assets/logo-comparatif-cadeau.svg" alt="Comparatif Cadeau logo">
+      <div>
+        <h1>Comparatif Casques Bluetooth <span style="color:var(--accent)"><br>Spécial Ado — Notre sélection</span></h1>
+        <div class="subtitle">Notre sélection — modèles disponibles en ligne. Entre 40 € et 70 €.</div>
+      </div>
+    </div>
 
+    <!-- INTRO -->
     <div class="intro">
-      <span class="highlight">Spécial Ado — Notre sélection</span><br>
-      Découvrez les casques sans fil les plus performants, confortables et endurants de 2025.
+      <strong style="color:var(--accent);font-size:18px">INTRODUCTION</strong>
+      <p style="margin:8px 0 0 0">Les casques Bluetooth sans fil offrent aujourd’hui une excellente autonomie, un confort durable et un son immersif. Pour les adolescents, ils allient liberté de mouvement, design moderne et fiabilité. Nous avons sélectionné quatre modèles entre 40 € et 70 €, reconnus pour leur qualité audio, leur solidité et leur autonomie.</p>
     </div>
 
-    <div class="cards">
-      <div class="card">
-        <img src="https://m.media-amazon.com/images/I/61dXv6qD1BL._AC_SL1500_.jpg" alt="Casque JBL Tune 520BT comparatif cadeau">
-        <h3>JBL Tune 520BT</h3>
-        <p>45 € — Autonomie : 57 h</p>
-        <ul>
-          <li>Léger et pliable</li>
-          <li>Bluetooth 5.3 stable</li>
-          <li>Bon confort</li>
-          <li>Pas d’ANC</li>
-        </ul>
-        <a href="https://amzn.to/3W2aaCQ" class="btn">Voir l’offre</a>
-      </div>
+    <!-- CARDS GRID -->
+    <section class="grid" id="cards">
+      <!-- Card 1 -->
+      <article class="card">
+        <div class="thumb">
+          <!-- remplace par: /comparatifs/images/606.svg ou chemin réel -->
+          <img src="../assets/606.svg" alt="JBL Tune 520BT">
+        </div>
+        <div class="card-body">
+          <div class="brand">JBL</div>
+          <div class="prod">Tune 520BT</div>
+          <div class="rating">★★★★☆</div>
+          <div class="price-label">Prix indicatif</div>
+          <div class="price">45,00 €</div>
+          <div class="specs">
+            <ul>
+              <li><strong>Autonomie :</strong> 57 h</li>
+              <li><strong>Points forts :</strong> léger, pliable, Bluetooth 5.3, bon confort</li>
+              <li><strong>Point faible :</strong> pas de réduction de bruit active</li>
+            </ul>
+            <div style="margin-top:8px;font-style:italic;color:var(--muted)">👉 Casque simple et fiable, parfait pour une écoute quotidienne.</div>
+          </div>
+          <div class="cta">
+            <a class="btn" href="https://amzn.to/3W2aaCQ" target="_blank" rel="noopener">VOIR L'OFFRE</a>
+          </div>
+        </div>
+      </article>
 
-      <div class="card">
-        <img src="https://m.media-amazon.com/images/I/71rQ2XgkZLL._AC_SL1500_.jpg" alt="Casque JBL Tune 720BT comparatif cadeau">
-        <h3>JBL Tune 720BT</h3>
-        <p>58 € — Autonomie : 76 h</p>
-        <ul>
-          <li>Multi-connexion</li>
-          <li>Confort durable</li>
-          <li>Charge rapide</li>
-          <li>Pas d’ANC</li>
-        </ul>
-        <a href="https://amzn.to/46MdE2q" class="btn">Voir l’offre</a>
-      </div>
+      <!-- Card 2 -->
+      <article class="card">
+        <div class="thumb">
+          <img src="../assets/607.svg" alt="JBL Tune 720BT">
+        </div>
+        <div class="card-body">
+          <div class="brand">JBL</div>
+          <div class="prod">Tune 720BT</div>
+          <div class="rating">★★★★☆</div>
+          <div class="price-label">Prix indicatif</div>
+          <div class="price">58,00 €</div>
+          <div class="specs">
+            <ul>
+              <li><strong>Autonomie :</strong> 76 h</li>
+              <li><strong>Points forts :</strong> autonomie record, multi-connexion, charge rapide</li>
+              <li><strong>Point faible :</strong> pas d’ANC</li>
+            </ul>
+            <div style="margin-top:8px;font-style:italic;color:var(--muted)">👉 Un modèle endurant, idéal pour écouter de la musique sans contrainte.</div>
+          </div>
+          <div class="cta">
+            <a class="btn" href="https://amzn.to/46MdE2q" target="_blank" rel="noopener">VOIR L'OFFRE</a>
+          </div>
+        </div>
+      </article>
 
-      <div class="card">
-        <img src="https://m.media-amazon.com/images/I/71htpGkX0rL._AC_SL1500_.jpg" alt="Casque JBL Tune 670NC comparatif cadeau">
-        <h3>JBL Tune 670NC</h3>
-        <p>62 € — Autonomie : 50 h (avec ANC)</p>
-        <ul>
-          <li>ANC performant</li>
-          <li>Bluetooth 5.3</li>
-          <li>Mode filaire</li>
-          <li>Compact</li>
-        </ul>
-        <a href="https://amzn.to/4oaNhcg" class="btn">Voir l’offre</a>
-      </div>
+      <!-- Card 3 -->
+      <article class="card">
+        <div class="thumb">
+          <img src="../assets/608.svg" alt="JBL Tune 670NC">
+        </div>
+        <div class="card-body">
+          <div class="brand">JBL</div>
+          <div class="prod">Tune 670NC</div>
+          <div class="rating">★★★★☆</div>
+          <div class="price-label">Prix indicatif</div>
+          <div class="price">62,00 €</div>
+          <div class="specs">
+            <ul>
+              <li><strong>Autonomie :</strong> 50 h (avec ANC)</li>
+              <li><strong>Points forts :</strong> réduction active du bruit, mode filaire</li>
+              <li><strong>Point faible :</strong> autonomie plus courte avec ANC</li>
+            </ul>
+            <div style="margin-top:8px;font-style:italic;color:var(--muted)">👉 Bon équilibre entre confort, modernité et praticité.</div>
+          </div>
+          <div class="cta">
+            <a class="btn" href="https://amzn.to/4oaNhcg" target="_blank" rel="noopener">VOIR L'OFFRE</a>
+          </div>
+        </div>
+      </article>
 
-      <div class="card">
-        <img src="https://m.media-amazon.com/images/I/71pTk5GQaxL._AC_SL1500_.jpg" alt="Casque JBL Tune 770NC comparatif cadeau">
-        <h3>JBL Tune 770NC</h3>
-        <p>70 € — Autonomie : 70 h</p>
-        <ul>
-          <li>ANC efficace</li>
-          <li>Design premium</li>
-          <li>Qualité audio remarquable</li>
-        </ul>
-        <a href="https://amzn.to/4qeu9Mv" class="btn">Voir l’offre</a>
-      </div>
-    </div>
+      <!-- Card 4 -->
+      <article class="card">
+        <div class="thumb">
+          <img src="../assets/609.svg" alt="JBL Tune 770NC">
+        </div>
+        <div class="card-body">
+          <div class="brand">JBL</div>
+          <div class="prod">Tune 770NC</div>
+          <div class="rating">★★★★☆</div>
+          <div class="price-label">Prix indicatif</div>
+          <div class="price">70,00 €</div>
+          <div class="specs">
+            <ul>
+              <li><strong>Autonomie :</strong> 70 h (sans ANC)</li>
+              <li><strong>Points forts :</strong> ANC efficace, son riche, appli JBL</li>
+              <li><strong>Point faible :</strong> légèrement plus cher</li>
+            </ul>
+            <div style="margin-top:8px;font-style:italic;color:var(--muted)">👉 Casque haut de gamme accessible, parfait pour un son immersif.</div>
+          </div>
+          <div class="cta">
+            <a class="btn" href="https://amzn.to/4qeu9Mv" target="_blank" rel="noopener">VOIR L'OFFRE</a>
+          </div>
+        </div>
+      </article>
+    </section>
 
-    <div class="accordion">
+    <!-- DETAILS ACCORDIONS -->
+    <h2 class="section-title">DETAIL SUR CHAQUE MODELE</h2>
+    <div class="muted-box">
       <details open>
-        <summary>JBL Tune 520BT</summary>
-        <ul>
-          <li>Autonomie : 57 h</li>
-          <li>Charge rapide : 5 min = 3 h</li>
-          <li>Connexion multi-appareils</li>
-          <li>Appli JBL Headphones</li>
-        </ul>
+        <summary>JBL Tune 520BT <span class="chev">▾</span></summary>
+        <div class="accordion-body">
+          <ul>
+            <li>Type : supra-auriculaire (on-ear)</li>
+            <li>Poids : 157 g</li>
+            <li>Autonomie : 57 h</li>
+            <li>Bluetooth 5.3 + charge rapide (5 min = 3 h)</li>
+            <li>Application JBL Headphones avec égaliseur</li>
+            <li>Connexion multi-appareils</li>
+          </ul>
+          <p style="color:var(--accent);font-weight:700;margin-top:8px">👉 Un casque compact, fiable et confortable.</p>
+        </div>
       </details>
 
       <details>
-        <summary>JBL Tune 720BT — 🏆 Coup de cœur du comparatif</summary>
-        <ul>
-          <li>Autonomie : 76 h</li>
-          <li>Confort durable et design solide</li>
-          <li>Bluetooth 5.3 + charge rapide</li>
-          <li>Le meilleur rapport autonomie/prix du comparatif</li>
-        </ul>
+        <summary>JBL Tune 720BT <span class="chev">▾</span></summary>
+        <div class="accordion-body">
+          <ul>
+            <li>Type : circum-aural (over-ear)</li>
+            <li>Poids : 220 g</li>
+            <li>Autonomie : 76 h</li>
+            <li>Multi-connexion + câble détachable</li>
+            <li>Bluetooth 5.3 stable</li>
+          </ul>
+          <p style="color:var(--accent);font-weight:700;margin-top:8px">👉 Excellent rapport autonomie/prix, confortable sur de longues durées.</p>
+        </div>
       </details>
 
       <details>
-        <summary>JBL Tune 670NC</summary>
-        <ul>
-          <li>Autonomie : 50 h (ANC activé)</li>
-          <li>Mode filaire</li>
-          <li>Réduction active du bruit</li>
-        </ul>
+        <summary>JBL Tune 670NC <span class="chev">▾</span></summary>
+        <div class="accordion-body">
+          <ul>
+            <li>Type : on-ear avec réduction active du bruit</li>
+            <li>Autonomie : ~50 h avec ANC</li>
+            <li>Réduction de bruit performante</li>
+            <li>Bluetooth 5.3 + mode filaire</li>
+          </ul>
+          <p style="color:var(--accent);font-weight:700;margin-top:8px">👉 Casque intelligent et moderne, parfait pour les déplacements.</p>
+        </div>
       </details>
 
       <details>
-        <summary>JBL Tune 770NC</summary>
-        <ul>
-          <li>Autonomie : 70 h sans ANC</li>
-          <li>Application JBL Headphones</li>
-          <li>Design pliable et confortable</li>
-        </ul>
+        <summary>JBL Tune 770NC <span class="chev">▾</span></summary>
+        <div class="accordion-body">
+          <ul>
+            <li>Type : over-ear avec ANC</li>
+            <li>Autonomie : jusqu’à 70 h sans ANC</li>
+            <li>Application JBL Headphones</li>
+            <li>Son équilibré, basses profondes</li>
+            <li>Design pliable et confortable</li>
+          </ul>
+          <p style="color:var(--accent);font-weight:700;margin-top:8px">👉 Un casque immersif, élégant et puissant.</p>
+        </div>
       </details>
     </div>
 
-    <div class="guide">
-      <h2>Guide d’achat : 5 critères à retenir</h2>
-      <ol>
-        <li>Autonomie : viser 40 h minimum.</li>
-        <li>Confort : coussinets souples et arceau léger.</li>
-        <li>Bluetooth : version 5.2 ou 5.3.</li>
-        <li>Réduction de bruit : utile pour les transports.</li>
-        <li>Rapport qualité/prix : équilibrer performance et fiabilité.</li>
-      </ol>
-    </div>
-
-    <div class="bottom-buttons">
-      <a href="#" class="btn">Idées cadeaux Homme</a>
-      <a href="#" class="btn">Idées cadeaux Femme</a>
-      <a href="#" class="btn">Idées cadeaux Enfant</a>
-      <a href="#" class="btn">Idées cadeaux Couple</a>
-    </div>
-
-    <footer>© 2025 Comparatif Cadeau — mise en relation gratuite et rapide.</footer>
-  </div>
-</body>
-</html>
+    <!-- GUIDE D'ACHAT -->
