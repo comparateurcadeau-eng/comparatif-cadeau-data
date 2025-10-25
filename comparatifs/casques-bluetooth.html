@@ -30,7 +30,17 @@
 
     .intro {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 50px;
+      font-size: 1.2rem; /* taille augmentée */
+      line-height: 1.8;
+    }
+
+    .intro .highlight {
+      display: block;
+      font-size: 1.5rem; /* mise en valeur du titre */
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #d21a28;
     }
 
     /* === CARTES PRODUITS === */
@@ -38,9 +48,8 @@
       display: flex;
       justify-content: center;
       align-items: stretch;
-      flex-wrap: nowrap; /* Empêche le retour à la ligne */
+      flex-wrap: nowrap;
       gap: 15px;
-      overflow-x: auto;
     }
 
     .card {
@@ -48,7 +57,7 @@
       color: #000;
       flex: 1 1 0;
       width: 22%;
-      max-width: 220px; /* largeur réduite pour 4 cartes côte à côte */
+      max-width: 220px;
       min-width: 200px;
       min-height: 520px;
       display: flex;
@@ -131,20 +140,6 @@
       margin-bottom: 10px;
     }
 
-    /* === COUP DE CŒUR === */
-    .coup-coeur {
-      margin-top: 60px;
-      background: #fff;
-      color: #000;
-      padding: 20px;
-      border-radius: 8px;
-    }
-
-    .coup-coeur h2 {
-      color: #d21a28;
-      text-align: left;
-    }
-
     /* === BOUTONS BAS DE PAGE === */
     .bottom-buttons {
       display: flex;
@@ -189,10 +184,12 @@
 
   <div class="container">
     <h1>Comparatif : les meilleurs casques Bluetooth — confort, autonomie et qualité audio</h1>
+
     <p class="intro">
-      <span class="highlight">Spécial Ado — Notre sélection</span><br>
+      <span class="highlight">Spécial Ado — Notre sélection</span>
       Les casques Bluetooth sans fil offrent aujourd’hui une excellente autonomie, un confort durable et un son immersif.<br>
-      Pour les adolescents, ils allient liberté de mouvement, design moderne et fiabilité. Découvrez les modèles 2025 les plus performants.
+      Pour les adolescents, ils allient liberté de mouvement, design moderne et fiabilité.<br>
+      Découvrez les modèles 2025 les plus performants et le coup de cœur en bas de page.
     </p>
 
     <div class="cards">
@@ -260,12 +257,15 @@
       </details>
 
       <details>
-        <summary>JBL Tune 720BT</summary>
+        <summary>JBL Tune 720BT — 🏆 Coup de cœur du comparatif</summary>
         <ul>
           <li>Autonomie : 76 h</li>
-          <li>Multi-connexion + câble détachable</li>
-          <li>Bluetooth 5.3 stable</li>
+          <li>Confort durable et design solide</li>
+          <li>Bluetooth 5.3 + charge rapide</li>
+          <li>Le meilleur rapport autonomie/prix du comparatif</li>
         </ul>
+        <p><strong>Pourquoi ce modèle est notre favori :</strong><br>
+        Le JBL Tune 720BT offre un équilibre parfait entre autonomie, confort et fiabilité, idéal pour les ados actifs.</p>
       </details>
 
       <details>
@@ -296,16 +296,6 @@
         <li>Réduction de bruit : utile pour les transports.</li>
         <li>Rapport qualité/prix : équilibrer performance et fiabilité.</li>
       </ol>
-    </div>
-
-    <div class="coup-coeur">
-      <h2>Notre coup de cœur 🏆</h2>
-      <p><strong>JBL Tune 720BT — autonomie et confort à toute épreuve.</strong></p>
-      <ul>
-        <li>76 h d’autonomie, Bluetooth 5.3, confort exceptionnel.</li>
-        <li>Recharge rapide, design robuste, son équilibré.</li>
-      </ul>
-      <a href="https://amzn.to/4ohZVX8" class="btn">Je veux l’acheter</a>
     </div>
 
     <div class="bottom-buttons">
