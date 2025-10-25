@@ -18,24 +18,14 @@
     }
 
     h1, h2 {
-      text-align: center;
       font-weight: 900;
       text-transform: uppercase;
     }
 
-    h1 {
-      font-size: 2.8rem;
-      margin-bottom: 15px;
-    }
+    h1 { font-size: 2.8rem; margin: 0; }
+    h2 { font-size: 2.3rem; margin: 50px 0 25px; text-align: center; }
 
-    h2 {
-      font-size: 2.3rem;
-      margin: 50px 0 25px;
-    }
-
-    h2 span {
-      color: #d21a28;
-    }
+    h2 span, h1 span { color: #d21a28; }
 
     h3 {
       font-size: 1.5rem;
@@ -44,15 +34,48 @@
       color: #000;
     }
 
-    .highlight { color: #d21a28; }
-
     .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 20px;
     }
 
-    /* Cartes produits */
+    /* --- HEADER --- */
+    .header-hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      padding: 60px 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      flex-wrap: wrap;
+    }
+
+    .header-hero img {
+      width: 160px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .hero-text {
+      max-width: 700px;
+    }
+
+    .hero-text h1 {
+      line-height: 1.2;
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      margin-top: 10px;
+      text-align: left;
+    }
+
+    .hero-sub span {
+      color: #d21a28;
+    }
+
+    /* --- GRID PRODUITS --- */
     .product-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -103,7 +126,7 @@
 
     .btn:hover { background: #b21722; }
 
-    /* Accordéons */
+    /* --- ACCORDÉONS --- */
     details {
       background: #0a0a0a;
       margin-bottom: 10px;
@@ -121,7 +144,6 @@
 
     summary:hover { color: #d21a28; }
 
-    /* Coup de cœur */
     .coup-coeur-content {
       background: #fff;
       color: #000;
@@ -132,7 +154,7 @@
 
     .coup-coeur-content strong { color: #d21a28; }
 
-    /* Bloc final */
+    /* --- CTA FINAL --- */
     .cta-block {
       text-align: center;
       margin: 60px 0 40px;
@@ -162,7 +184,7 @@
       transform: translateY(-2px);
     }
 
-    /* Footer catégories */
+    /* --- FOOTER --- */
     .footer-links {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -182,19 +204,25 @@
     @media(max-width:768px){
       h1{font-size:2.1rem}
       h2{font-size:1.8rem}
+      .header-hero{flex-direction:column;gap:20px;text-align:center}
+      .hero-text h1{text-align:center}
+      .hero-sub{text-align:center}
     }
   </style>
 </head>
 
 <body>
   <div class="container">
-    <h1>Comparatif <span class="highlight">Casques Bluetooth</span> — Spécial Ado</h1>
-    <p style="text-align:center;max-width:800px;margin:0 auto;font-size:1.1rem;">
-      Les casques Bluetooth sans fil offrent aujourd’hui une excellente autonomie, un confort durable et un son immersif.
-      Pour les adolescents, ils allient liberté de mouvement, design moderne et fiabilité.
-      Voici notre sélection des meilleurs modèles entre 40 € et 70 €.
-    </p>
+    <!-- HEADER AVEC LOGO -->
+    <section class="header-hero">
+      <img src="https://drive.google.com/uc?export=view&id=16CPg97Y1HPv4h9q55ptxHEk3Ujfnuy35" alt="Comparatif Cadeau Logo">
+      <div class="hero-text">
+        <h1>Comparatif<br><span>Les meilleurs casques Bluetooth pour ados</span></h1>
+        <p class="hero-sub">Notre sélection — <span>modèles disponibles en ligne</span>.</p>
+      </div>
+    </section>
 
+    <!-- PRODUITS -->
     <section class="product-grid">
       <div class="product-card">
         <img src="../assets/606.svg" alt="comparatif cadeau JBL Tune 520BT">
@@ -233,6 +261,7 @@
       </div>
     </section>
 
+    <!-- DÉTAILS -->
     <h2>Détail sur <span>chaque modèle</span></h2>
     <details open>
       <summary>JBL Tune 520BT</summary>
@@ -244,46 +273,7 @@
       </ul>
     </details>
 
-    <details>
-      <summary>JBL Tune 720BT</summary>
-      <ul>
-        <li>Type : circum-aural (over-ear)</li>
-        <li>Poids : 220 g</li>
-        <li>Autonomie : 76 h</li>
-        <li>Bluetooth 5.3 stable</li>
-      </ul>
-    </details>
-
-    <details>
-      <summary>JBL Tune 670NC</summary>
-      <ul>
-        <li>Réduction active du bruit (ANC)</li>
-        <li>Autonomie : ~50 h avec ANC</li>
-        <li>Bluetooth 5.3 + mode filaire</li>
-      </ul>
-    </details>
-
-    <details>
-      <summary>JBL Tune 770NC</summary>
-      <ul>
-        <li>ANC performant</li>
-        <li>Autonomie : jusqu’à 70 h sans ANC</li>
-        <li>Son équilibré, basses profondes</li>
-      </ul>
-    </details>
-
-    <h2>Guide d’achat : <span>5 critères à retenir</span></h2>
-    <details open>
-      <summary>Nos critères</summary>
-      <ul>
-        <li><strong>Autonomie</strong> : viser 40 h minimum pour un usage quotidien.</li>
-        <li><strong>Confort</strong> : coussinets souples et arceau léger.</li>
-        <li><strong>Bluetooth</strong> : version 5.2 ou 5.3 pour plus de stabilité.</li>
-        <li><strong>Réduction de bruit</strong> : utile pour le transport ou l’étude.</li>
-        <li><strong>Rapport qualité/prix</strong> : équilibrer performance et fiabilité.</li>
-      </ul>
-    </details>
-
+    <!-- COUP DE CŒUR -->
     <h2>Notre coup <span>de cœur</span></h2>
     <details open>
       <summary>AND THE WINNER IS…</summary>
@@ -293,23 +283,16 @@
           <li>76 h d’autonomie et connexion Bluetooth 5.3</li>
           <li>Confort enveloppant et design robuste</li>
           <li>Recharge rapide : 5 min = 3 h d’écoute</li>
-          <li>💡 <em>Un choix sûr pour ceux qui cherchent un casque durable, simple et performant.</em></li>
         </ul>
       </div>
     </details>
 
+    <!-- CTA FINAL -->
     <div class="cta-block">
       <h2>Retrouvez tous les produits de la <span>catégorie</span></h2>
       <a href="https://www.amazon.fr/s?k=CASQUES+ADO" target="_blank" rel="noopener">
         <button class="cta-btn">JE VEUX ENCORE +</button>
       </a>
-    </div>
-
-    <div class="footer-links">
-      <div class="footer-box">Idées cadeaux Homme</div>
-      <div class="footer-box">Idées cadeaux Femme</div>
-      <div class="footer-box">Idées cadeaux Enfant</div>
-      <div class="footer-box">Idées cadeaux Couple</div>
     </div>
   </div>
 </body>
