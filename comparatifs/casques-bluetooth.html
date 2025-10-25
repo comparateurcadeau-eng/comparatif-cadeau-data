@@ -1,155 +1,124 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Comparatif Cadeau : les meilleurs casques Bluetooth — confort, autonomie et qualité audio</title>
-  <meta name="description" content="Comparatif Cadeau vous présente les meilleurs casques Bluetooth pour ados — confort, autonomie et design moderne. Découvrez notre coup de cœur 2025.">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comparatif Cadeau : Casques Bluetooth JBL — autonomie, confort et qualité audio</title>
+  <meta name="description" content="Comparatif Cadeau vous présente les meilleurs casques Bluetooth JBL pour adolescents — autonomie, confort et qualité audio 2025.">
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #000;
+      font-family: 'Arial', sans-serif;
+      background: #000;
       color: #fff;
       line-height: 1.6;
     }
-
-    h1, h2, h3 {
-      text-align: center;
-      font-weight: bold;
-    }
-
+    h1, h2, h3 { font-weight: 700; }
+    h1 { text-align: center; color: #fff; margin-top: 40px; }
     .highlight { color: #d21a28; }
-
     .container {
+      width: 95%;
       max-width: 1200px;
       margin: 0 auto;
       padding: 20px;
     }
-
     .intro {
       text-align: center;
-      margin-bottom: 50px;
-      font-size: 1.2rem; /* taille augmentée */
-      line-height: 1.8;
+      font-size: 1.2rem;
+      margin: 30px 0;
     }
 
-    .intro .highlight {
-      display: block;
-      font-size: 1.5rem; /* mise en valeur du titre */
-      margin-bottom: 10px;
-      font-weight: bold;
-      color: #d21a28;
-    }
-
-    /* === CARTES PRODUITS === */
+    /* Cartes Produits */
     .cards {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      align-items: stretch;
-      flex-wrap: nowrap;
-      gap: 15px;
+      gap: 20px;
+      margin-top: 40px;
     }
-
     .card {
       background: #fff;
       color: #000;
-      flex: 1 1 0;
-      width: 22%;
-      max-width: 220px;
-      min-width: 200px;
-      min-height: 520px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      width: 260px;
+      padding: 20px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      border-radius: 10px;
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
-      padding: 18px;
+      text-align: center;
       transition: transform 0.2s ease-in-out;
     }
-
-    .card:hover { transform: translateY(-4px); }
-
+    .card:hover { transform: translateY(-5px); }
     .card img {
+      width: 140px;
       height: 140px;
-      width: auto;
-      margin: 0 auto 10px auto;
-      display: block;
       object-fit: contain;
+      margin: 0 auto 15px;
     }
-
+    .card h3 { margin: 10px 0; }
+    .card ul { text-align: left; margin: 0 auto; padding: 0; list-style-type: disc; }
+    .card li { margin-left: 20px; }
     .btn {
       background: #d21a28;
       color: #fff;
+      padding: 10px 14px;
       border: none;
-      padding: 10px 12px;
-      text-transform: uppercase;
+      border-radius: 5px;
       font-weight: bold;
-      border-radius: 4px;
       text-decoration: none;
+      text-transform: uppercase;
       display: inline-block;
-      margin-top: auto;
-      text-align: center;
-      font-size: 14px;
+      margin-top: 15px;
     }
-
     .btn:hover { background: #a51420; }
 
-    /* === ACCORDÉON === */
+    /* Accordéon */
     .accordion {
       margin-top: 60px;
       background: #fff;
       color: #000;
       border-radius: 8px;
       overflow: hidden;
+      padding: 15px;
     }
-
-    details {
+    .accordion details {
       border-bottom: 1px solid #ccc;
-      padding: 10px 20px;
+      padding: 10px 0;
     }
-
-    summary {
-      cursor: pointer;
+    .accordion summary {
       font-weight: bold;
-      color: #000;
+      cursor: pointer;
       outline: none;
     }
-
-    details[open] summary {
+    .accordion summary:hover {
       color: #d21a28;
     }
-
-    details p, details ul {
-      margin-left: 15px;
+    .accordion p, .accordion ul {
+      margin-left: 20px;
     }
 
-    /* === GUIDE D’ACHAT === */
+    /* Guide d'achat */
     .guide {
-      margin-top: 60px;
       background: #fff;
       color: #000;
-      padding: 20px;
       border-radius: 8px;
+      padding: 25px;
+      margin-top: 50px;
     }
-
     .guide h2 {
-      text-align: left;
       color: #d21a28;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
 
-    /* === BOUTONS BAS DE PAGE === */
+    /* Boutons bas de page */
     .bottom-buttons {
       display: flex;
       justify-content: center;
-      align-items: center;
-      gap: 15px;
       flex-wrap: wrap;
-      margin-top: 60px;
+      gap: 15px;
+      margin-top: 50px;
     }
-
     .bottom-buttons .btn {
       background: #d21a28;
       color: #fff;
@@ -159,38 +128,32 @@
       text-transform: uppercase;
     }
 
-    .bottom-buttons .btn:hover { background: #a51420; }
-
     footer {
       text-align: center;
-      margin: 40px 0;
       font-size: 14px;
       opacity: 0.7;
+      margin: 40px 0;
     }
 
-    /* === RESPONSIVE === */
+    /* Responsive */
     @media (max-width: 1024px) {
-      .cards { flex-wrap: wrap; justify-content: center; }
-      .card { width: 45%; max-width: 260px; }
+      .cards { justify-content: center; }
+      .card { width: 45%; }
     }
-
     @media (max-width: 600px) {
-      .card { width: 100%; max-width: 100%; }
+      .card { width: 100%; }
     }
   </style>
 </head>
-
 <body>
 
   <div class="container">
     <h1>Comparatif : les meilleurs casques Bluetooth — confort, autonomie et qualité audio</h1>
 
-    <p class="intro">
-      <span class="highlight">Spécial Ado — Notre sélection</span>
-      Les casques Bluetooth sans fil offrent aujourd’hui une excellente autonomie, un confort durable et un son immersif.<br>
-      Pour les adolescents, ils allient liberté de mouvement, design moderne et fiabilité.<br>
-      Découvrez les modèles 2025 les plus performants et le coup de cœur en bas de page.
-    </p>
+    <div class="intro">
+      <span class="highlight">Spécial Ado — Notre sélection</span><br>
+      Découvrez les casques sans fil les plus performants, confortables et endurants de 2025.
+    </div>
 
     <div class="cards">
       <div class="card">
@@ -264,8 +227,6 @@
           <li>Bluetooth 5.3 + charge rapide</li>
           <li>Le meilleur rapport autonomie/prix du comparatif</li>
         </ul>
-        <p><strong>Pourquoi ce modèle est notre favori :</strong><br>
-        Le JBL Tune 720BT offre un équilibre parfait entre autonomie, confort et fiabilité, idéal pour les ados actifs.</p>
       </details>
 
       <details>
@@ -288,7 +249,7 @@
     </div>
 
     <div class="guide">
-      <h2>Guide d’achat : <span class="highlight">5 critères à retenir</span></h2>
+      <h2>Guide d’achat : 5 critères à retenir</h2>
       <ol>
         <li>Autonomie : viser 40 h minimum.</li>
         <li>Confort : coussinets souples et arceau léger.</li>
@@ -305,7 +266,7 @@
       <a href="#" class="btn">Idées cadeaux Couple</a>
     </div>
 
-    <footer>© 2025 Comparatif Cadeau — Un interlocuteur 24/7, mise en relation gratuite.</footer>
+    <footer>© 2025 Comparatif Cadeau — mise en relation gratuite et rapide.</footer>
   </div>
 </body>
 </html>
