@@ -38,30 +38,32 @@
       display: flex;
       justify-content: center;
       align-items: stretch;
-      flex-wrap: wrap;
-      gap: 20px;
+      flex-wrap: nowrap; /* Empêche le retour à la ligne */
+      gap: 15px;
+      overflow-x: auto;
     }
 
     .card {
       background: #fff;
       color: #000;
-      flex: 1 1 calc(22% - 20px);
-      max-width: 240px;
-      min-width: 220px;
+      flex: 1 1 0;
+      width: 22%;
+      max-width: 220px; /* largeur réduite pour 4 cartes côte à côte */
+      min-width: 200px;
       min-height: 520px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       border-radius: 10px;
       box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
-      padding: 20px;
+      padding: 18px;
       transition: transform 0.2s ease-in-out;
     }
 
     .card:hover { transform: translateY(-4px); }
 
     .card img {
-      height: 150px;
+      height: 140px;
       width: auto;
       margin: 0 auto 10px auto;
       display: block;
@@ -72,7 +74,7 @@
       background: #d21a28;
       color: #fff;
       border: none;
-      padding: 10px 15px;
+      padding: 10px 12px;
       text-transform: uppercase;
       font-weight: bold;
       border-radius: 4px;
@@ -80,6 +82,7 @@
       display: inline-block;
       margin-top: auto;
       text-align: center;
+      font-size: 14px;
     }
 
     .btn:hover { background: #a51420; }
@@ -155,7 +158,7 @@
     .bottom-buttons .btn {
       background: #d21a28;
       color: #fff;
-      padding: 12px 22px;
+      padding: 12px 20px;
       border-radius: 6px;
       font-weight: bold;
       text-transform: uppercase;
@@ -172,11 +175,12 @@
 
     /* === RESPONSIVE === */
     @media (max-width: 1024px) {
-      .card { flex: 1 1 calc(45% - 20px); }
+      .cards { flex-wrap: wrap; justify-content: center; }
+      .card { width: 45%; max-width: 260px; }
     }
 
     @media (max-width: 600px) {
-      .card { flex: 1 1 100%; max-width: 100%; }
+      .card { width: 100%; max-width: 100%; }
     }
   </style>
 </head>
