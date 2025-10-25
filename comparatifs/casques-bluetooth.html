@@ -91,6 +91,18 @@
 
     .price { color: #d21a28; font-weight: bold; font-size: 1.3em; }
 
+    .rating {
+      color: #d21a28;
+      font-weight: bold;
+      font-size: 1.05em;
+      margin: 4px 0;
+    }
+    .rating span {
+      color: #666;
+      font-size: 0.9em;
+      font-weight: normal;
+    }
+
     .btn {
       display: inline-block;
       padding: 10px 18px;
@@ -140,9 +152,7 @@
       color: #d21a28;
       text-transform: none;
       margin-bottom: 15px;
-      transition: color 0.3s ease;
     }
-    .cta-block h2:hover { color: #fff; }
     .cta-btn {
       background: #d21a28;
       color: #fff;
@@ -187,6 +197,7 @@
         <h3>JBL Tune 520BT</h3>
         <p>Autonomie : 57 h — Léger, pliable, Bluetooth 5.3</p>
         <p class="price">45 €</p>
+        <div class="rating">★★★★☆ <span>(4.6 / 5 — 18 000 avis)</span></div>
         <p>👉 Casque simple et fiable, parfait pour une écoute quotidienne.</p>
         <a class="btn" href="https://amzn.to/3W2aaCQ" target="_blank" rel="noopener">Voir le produit</a>
       </div>
@@ -196,6 +207,7 @@
         <h3>JBL Tune 720BT</h3>
         <p>Autonomie : 76 h — Confort optimal, charge rapide</p>
         <p class="price">58 €</p>
+        <div class="rating">★★★★★ <span>(4.8 / 5 — 7 500 avis)</span></div>
         <p>👉 Idéal pour écouter de la musique sans contrainte.</p>
         <a class="btn" href="https://amzn.to/46MdE2q" target="_blank" rel="noopener">Voir le produit</a>
       </div>
@@ -205,6 +217,7 @@
         <h3>JBL Tune 670NC</h3>
         <p>Autonomie : 50 h — Réduction active du bruit, mode filaire</p>
         <p class="price">62 €</p>
+        <div class="rating">★★★★☆ <span>(4.6 / 5 — 4 000 avis)</span></div>
         <p>👉 Bon équilibre entre confort, modernité et praticité.</p>
         <a class="btn" href="https://amzn.to/4oaNhcg" target="_blank" rel="noopener">Voir le produit</a>
       </div>
@@ -214,6 +227,7 @@
         <h3>JBL Tune 770NC</h3>
         <p>Autonomie : 70 h — ANC efficace, son riche, appli JBL</p>
         <p class="price">70 €</p>
+        <div class="rating">★★★★★ <span>(4.8 / 5 — 2 800 avis)</span></div>
         <p>👉 Casque haut de gamme accessible, parfait pour un son immersif.</p>
         <a class="btn" href="https://amzn.to/4qeu9Mv" target="_blank" rel="noopener">Voir le produit</a>
       </div>
@@ -292,21 +306,11 @@
     "@type": "ItemList",
     "name": "Comparatif Casques Bluetooth 2025",
     "itemListElement": [
-      { "@type": "Product", "position": 1, "name": "JBL Tune 520BT", "brand": { "@type": "Brand", "name": "JBL" }, "offers": { "@type": "Offer", "price": "45", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://amzn.to/3W2aaCQ" }},
-      { "@type": "Product", "position": 2, "name": "JBL Tune 720BT", "brand": { "@type": "Brand", "name": "JBL" }, "offers": { "@type": "Offer", "price": "58", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://amzn.to/46MdE2q" }},
-      { "@type": "Product", "position": 3, "name": "JBL Tune 670NC", "brand": { "@type": "Brand", "name": "JBL" }, "offers": { "@type": "Offer", "price": "62", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://amzn.to/4oaNhcg" }},
-      { "@type": "Product", "position": 4, "name": "JBL Tune 770NC", "brand": { "@type": "Brand", "name": "JBL" }, "offers": { "@type": "Offer", "price": "70", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://amzn.to/4qeu9Mv" }}
+      { "@type": "Product", "position": 1, "name": "JBL Tune 520BT", "brand": { "@type": "Brand", "name": "JBL" }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.6", "reviewCount": "18000" }, "offers": { "@type": "Offer", "price": "45", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://amzn.to/3W2aaCQ" }},
+      { "@type": "Product", "position": 2, "name": "JBL Tune 720BT", "brand": { "@type": "Brand", "name": "JBL" }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "7500" }, "offers": { "@type": "Offer", "price": "58", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://amzn.to/46MdE2q" }},
+      { "@type": "Product", "position": 3, "name": "JBL Tune 670NC", "brand": { "@type": "Brand", "name": "JBL" }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.6", "reviewCount": "4000" }, "offers": { "@type": "Offer", "price": "62", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://amzn.to/4oaNhcg" }},
+      { "@type": "Product", "position": 4, "name": "JBL Tune 770NC", "brand": { "@type": "Brand", "name": "JBL" }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "2800" }, "offers": { "@type": "Offer", "price": "70", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://amzn.to/4qeu9Mv" }}
     ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "AggregateRating",
-    "itemReviewed": "Comparatif Casques Bluetooth",
-    "ratingValue": "4.7",
-    "reviewCount": "132"
   }
   </script>
 
