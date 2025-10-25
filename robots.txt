@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://data.comparatif-cadeau.com/sitemap.xml
+Sitemap: https://data.comparatifcadeau.com/sitemap.xml
+
