@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Comparatif Casques Bluetooth — Spécial Ado | Comparatif Cadeau</title>
 
-  <!-- ✅ CSS Bootstrap & FontAwesome -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
 
   <style>
     body {
-      background-color: #000;
+      background: #000;
       color: #fff;
       font-family: "Poppins", Arial, sans-serif;
-      line-height: 1.6;
     }
 
     h1, h2, h3, h4, h5 {
       font-weight: 600;
     }
 
-    h2, h3 {
+    .highlight {
       color: #d21a28;
     }
 
@@ -30,26 +28,24 @@
     }
 
     .intro {
-      margin-top: 40px;
-      margin-bottom: 40px;
+      margin: 40px 0;
     }
 
-    /* === Cartes Produits Uniformisées === */
+    /* === CARTES PRODUITS === */
     .card {
       background: #fff;
       color: #000;
       border: none;
       border-radius: 10px;
-      box-shadow: 0 3px 12px rgba(255, 255, 255, 0.08);
-      height: 100%;
+      box-shadow: 0 2px 12px rgba(255, 255, 255, 0.1);
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      transition: transform 0.2s ease-in-out;
+      height: 100%;
+      transition: all 0.2s ease;
     }
 
     .card:hover {
-      transform: scale(1.03);
+      transform: translateY(-5px);
     }
 
     .card img {
@@ -65,85 +61,78 @@
       justify-content: space-between;
     }
 
-    .card-title {
-      color: #d21a28;
-      font-weight: 700;
-      font-size: 1.2rem;
-    }
-
     .btn-custom {
-      background-color: #d21a28;
+      background: #d21a28;
       color: #fff;
       border: none;
       padding: 10px 20px;
       border-radius: 4px;
-      font-weight: bold;
+      font-weight: 600;
+      margin-top: auto;
     }
 
     .btn-custom:hover {
-      background-color: #a31320;
+      background: #a31320;
     }
 
-    /* === Accordéon === */
+    /* === ACCORDÉON === */
     .accordion-button {
-      background-color: #fff;
+      background: #fff;
       color: #000;
-      font-weight: bold;
+      font-weight: 600;
     }
 
     .accordion-button:not(.collapsed) {
-      background-color: #f9f9f9;
+      background: #f8f8f8;
       color: #d21a28;
     }
 
     .accordion-body {
-      background-color: #fff;
+      background: #fff;
       color: #000;
     }
 
-    .section-title {
-      color: #fff;
-      margin-top: 60px;
-      margin-bottom: 20px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .highlight {
-      color: #d21a28;
-      font-weight: bold;
-    }
-
+    /* === BLOCS DE BAS DE PAGE === */
     .footer-links .card {
-      background-color: #d21a28;
+      background: #d21a28;
       color: #fff;
-      border-radius: 8px;
-      height: 100%;
+      text-align: center;
+      height: 120px;
       display: flex;
       align-items: center;
       justify-content: center;
+      border-radius: 8px;
+      transition: transform 0.2s ease;
+    }
+
+    .footer-links .card:hover {
+      transform: scale(1.05);
     }
 
     .footer-links h2 {
-      color: #fff;
-      font-size: 1.5rem;
+      font-size: 1.4rem;
+      font-weight: 600;
       margin: 0;
     }
 
+    /* === ÉGALISATION AUTOMATIQUE === */
+    .equal-height {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .equal-height > [class*='col-'] {
+      display: flex;
+    }
+
+    .card {
+      flex: 1 1 auto;
+    }
+
     @media (max-width: 768px) {
-      h1 {
-        font-size: 1.8rem;
-        text-align: center;
-      }
-      h2 {
-        font-size: 1.4rem;
-        text-align: center;
-      }
-      .intro {
-        text-align: center;
-      }
-      .card {
-        margin-bottom: 20px;
+      .footer-links .card {
+        height: auto;
+        padding: 20px 0;
       }
     }
   </style>
@@ -151,23 +140,20 @@
 
 <body>
   <div class="container py-5">
+    <h1 class="text-center mb-3">Comparatif Casques Bluetooth sans fil</h1>
+    <h2 class="text-center highlight mb-4">Spécial Ado — Notre sélection</h2>
 
-    <!-- Titre -->
-    <h1 class="text-center mb-4">Comparatif Casques Bluetooth sans fil</h1>
-    <h2 class="text-center highlight">Spécial Ado — Notre sélection</h2>
-
-    <!-- Introduction -->
-    <div class="intro">
+    <div class="intro text-center">
       <p>Les casques Bluetooth sans fil offrent aujourd’hui une excellente autonomie, un confort durable et un son immersif.</p>
       <p>Pour les adolescents, ils allient liberté de mouvement, design moderne et fiabilité. Nous avons sélectionné quatre modèles entre 40 € et 70 €, reconnus pour leur qualité audio, leur solidité et leur autonomie.</p>
     </div>
 
-    <!-- Version courte (4 produits) -->
-    <div class="row g-4">
+    <!-- PRODUITS -->
+    <div class="row g-4 equal-height">
       <div class="col-md-3 d-flex">
         <div class="card text-center p-3 w-100">
+          <img src="/web/image/606-59b72e3f/Image%20comparatif%20cadeau%20(26).svg" alt="comparatif cadeau JBL Tune 520BT" class="img-fluid mb-3" />
           <div class="card-body">
-            <img src="/web/image/606-59b72e3f/Image%20comparatif%20cadeau%20(26).svg" class="img-fluid mb-3" alt="comparatif cadeau JBL Tune 520BT">
             <h5 class="card-title">JBL Tune 520BT</h5>
             <p><strong>45,00 €</strong> — Autonomie : 57 h</p>
             <ul class="text-start small">
@@ -183,8 +169,8 @@
 
       <div class="col-md-3 d-flex">
         <div class="card text-center p-3 w-100">
+          <img src="/web/image/607-4220a750/Image%20comparatif%20cadeau%20(27).svg" alt="comparatif cadeau JBL Tune 720BT" class="img-fluid mb-3" />
           <div class="card-body">
-            <img src="/web/image/607-4220a750/Image%20comparatif%20cadeau%20(27).svg" class="img-fluid mb-3" alt="comparatif cadeau JBL Tune 720BT">
             <h5 class="card-title">JBL Tune 720BT</h5>
             <p><strong>58,00 €</strong> — Autonomie : 76 h</p>
             <ul class="text-start small">
@@ -200,10 +186,10 @@
 
       <div class="col-md-3 d-flex">
         <div class="card text-center p-3 w-100">
+          <img src="/web/image/608-441baea6/Image%20comparatif%20cadeau%20(28).svg" alt="comparatif cadeau JBL Tune 670NC" class="img-fluid mb-3" />
           <div class="card-body">
-            <img src="/web/image/608-441baea6/Image%20comparatif%20cadeau%20(28).svg" class="img-fluid mb-3" alt="comparatif cadeau JBL Tune 670NC">
             <h5 class="card-title">JBL Tune 670NC</h5>
-            <p><strong>62,00 €</strong> — Autonomie : 50 h (avec ANC)</p>
+            <p><strong>62,00 €</strong> — Autonomie : 50 h (ANC)</p>
             <ul class="text-start small">
               <li>Réduction active du bruit</li>
               <li>Mode filaire</li>
@@ -217,8 +203,8 @@
 
       <div class="col-md-3 d-flex">
         <div class="card text-center p-3 w-100">
+          <img src="/web/image/609-cf38df1f/Image%20comparatif%20cadeau%20(29).svg" alt="comparatif cadeau JBL Tune 770NC" class="img-fluid mb-3" />
           <div class="card-body">
-            <img src="/web/image/609-cf38df1f/Image%20comparatif%20cadeau%20(29).svg" class="img-fluid mb-3" alt="comparatif cadeau JBL Tune 770NC">
             <h5 class="card-title">JBL Tune 770NC</h5>
             <p><strong>70,00 €</strong> — Autonomie : 70 h</p>
             <ul class="text-start small">
@@ -233,11 +219,34 @@
       </div>
     </div>
 
-    <!-- Accordéon, guide, coup de coeur etc. (inchangé) -->
-    <!-- ✅ Garde le reste du code identique à la version précédente -->
+    <!-- ACCORDÉONS -->
+    <h2 class="section-title mt-5">Détail sur chaque modèle</h2>
+    <div class="accordion" id="details">
+      <div class="accordion-item">
+        <h2 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#m1">JBL Tune 520BT</button></h2>
+        <div id="m1" class="accordion-collapse collapse show" data-bs-parent="#details">
+          <div class="accordion-body">Autonomie 57 h, léger et fiable.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#m2">JBL Tune 720BT</button></h2>
+        <div id="m2" class="accordion-collapse collapse" data-bs-parent="#details">
+          <div class="accordion-body">76 h d’autonomie, multi-connexion, excellent confort.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOCS BAS -->
+    <div class="footer-links mt-5">
+      <div class="row g-4 equal-height">
+        <div class="col-md-3 d-flex"><div class="card w-100"><h2>Idées cadeaux<br>Homme</h2></div></div>
+        <div class="col-md-3 d-flex"><div class="card w-100"><h2>Idées cadeaux<br>Femme</h2></div></div>
+        <div class="col-md-3 d-flex"><div class="card w-100"><h2>Idées cadeaux<br>Enfant</h2></div></div>
+        <div class="col-md-3 d-flex"><div class="card w-100"><h2>Idées cadeaux<br>Couple</h2></div></div>
+      </div>
+    </div>
   </div>
 
-  <!-- ✅ JS Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
