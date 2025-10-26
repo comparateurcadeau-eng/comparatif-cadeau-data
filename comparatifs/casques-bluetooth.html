@@ -3,114 +3,205 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Comparatif Cadeau — Modèle de page</title>
-  <meta name="description" content="Template officiel Comparatif Cadeau — généré automatiquement via le module Comparatif Builder.">
+  <title>Comparatif Cadeau : les meilleurs casques Bluetooth — confort, autonomie et qualité audio</title>
+  <meta name="description" content="Comparatif Cadeau vous présente les meilleurs casques Bluetooth pour ados — confort, autonomie et design moderne. Découvrez notre coup de cœur 2025.">
   <meta name="robots" content="index, follow" />
   <link rel="icon" type="image/png" href="https://data.comparatifcadeau.com/assets/logo-comparatif-cadeau.png">
   <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #000;
-      color: #fff;
-      line-height: 1.6;
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family:Arial, sans-serif;
+      background:#000;
+      color:#fff;
+      line-height:1.6;
+    }
+    h1,h2,h3{
+      text-transform:uppercase;
+      font-weight:900;
+    }
+    h1{font-size:2.6rem;margin:0;}
+    h2{font-size:2rem;margin:40px 0 20px;}
+    h2 span{color:#d21a28;}
+    p{margin:0 0 10px;}
+
+    /* HEADER */
+    .header-hero{
+      display:flex;
+      align-items:center;
+      justify-content:flex-start;
+      gap:40px;
+      max-width:1200px;
+      margin:0 auto;
+      padding:60px 20px;
+      border-bottom:1px solid rgba(255,255,255,0.1);
+    }
+    .header-hero img{width:180px;height:auto;}
+    .hero-text p span{color:#d21a28;}
+
+    /* PRODUITS */
+    .product-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:25px;
+      margin-top:40px;
+    }
+    .product-card{
+      background:#fff;
+      color:#000;
+      padding:20px;
+      border-radius:10px;
+      text-align:center;
+      box-shadow:0 0 25px rgba(255,255,255,0.1);
+    }
+    .product-card img{
+      width:100%;
+      height:180px;
+      object-fit:contain;
+      margin-bottom:15px;
+    }
+    .price{font-size:1.8rem;font-weight:900;margin:4px 0;}
+    .rating{color:#f5b50a;font-size:1.1rem;margin:6px 0;}
+    .btn{
+      background:#d21a28;
+      color:#fff;
+      padding:10px 20px;
+      text-decoration:none;
+      border-radius:6px;
+      font-weight:bold;
+      display:inline-block;
+      margin-top:10px;
+    }
+    .btn:hover{background:#b21722;}
+
+    /* ACCORDÉONS */
+    details{
+      background:#111;
+      margin:10px 0;
+      padding:10px;
+      border:1px solid #333;
+      border-radius:6px;
+    }
+    summary{cursor:pointer;font-weight:bold;font-size:1.1rem;}
+    summary:hover{color:#d21a28;}
+
+    /* COUP DE COEUR */
+    .highlight{color:#d21a28;}
+    .coup-coeur{
+      background:#fff;
+      color:#000;
+      padding:20px;
+      border-radius:10px;
+      text-align:center;
     }
 
-    /* ===== HEADER HERO ===== */
-    .header-hero {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      gap: 40px;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 60px 20px;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
+    /* FOOTER */
+    .footer{
+      background:#000;
+      color:#aaa;
+      text-align:center;
+      padding:30px 10px 50px;
+      font-size:0.9rem;
+      line-height:1.7;
+      border-top:1px solid rgba(255,255,255,0.1);
     }
-    .header-hero img {
-      width: 180px;
-      height: auto;
-    }
-    .hero-text h1 {
-      font-size: 2.8rem;
-      text-transform: uppercase;
-      margin: 0;
-      font-weight: 900;
-    }
-    .hero-text h1 span {
-      color: #d21a28;
-    }
-    .hero-text p {
-      font-size: 1.1rem;
-      margin-top: 10px;
-    }
-    .hero-text p span {
-      color: #d21a28;
-    }
+    .footer a{color:#d21a28;text-decoration:none;}
+    .footer a:hover{text-decoration:underline;}
+    .footer em{font-style:italic;}
 
-    /* ===== CONTENU CENTRAL ===== */
-    .page-content {
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    /* ===== FOOTER ===== */
-    .footer {
-      background: #000;
-      color: #aaa;
-      text-align: center;
-      padding: 30px 10px 50px;
-      font-size: 0.9rem;
-      line-height: 1.7;
-      border-top: 1px solid rgba(255,255,255,0.1);
-    }
-    .footer a {
-      color: #d21a28;
-      text-decoration: none;
-    }
-    .footer a:hover {
-      text-decoration: underline;
-    }
-    .footer p {
-      margin: 5px 0;
-    }
-    .footer em {
-      font-style: italic;
-    }
-
-    @media (max-width: 768px) {
-      .header-hero {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-      }
-      .hero-text h1 {
-        font-size: 2.2rem;
-      }
+    @media(max-width:768px){
+      .header-hero{flex-direction:column;text-align:center;}
+      h1{font-size:2rem;}
+      h2{font-size:1.6rem;}
     }
   </style>
 </head>
 
 <body>
-
-  <!-- ===== HEADER ===== -->
-  <header class="header-hero">
+  <!-- HEADER -->
+  <section class="header-hero">
     <img src="https://data.comparatifcadeau.com/assets/logo-comparatif-cadeau.png" alt="comparatif cadeau logo">
     <div class="hero-text">
-      <h1>La boîte à idées<br><span>Meilleures idées cadeaux</span> pour filles</h1>
+      <h1>La boîte à idées<br><span>Meilleures idées cadeaux</span> pour ados</h1>
       <p>Notre sélection — <span>modèles disponibles en ligne.</span></p>
     </div>
-  </header>
+  </section>
 
-  <!-- ===== CONTENU GÉNÉRÉ AUTOMATIQUEMENT ===== -->
-  <main class="page-content">
-    <!-- Le contenu produit par le script (comparatifs, guides, JSON-LD, etc.) sera injecté ici -->
-    {{PAGE_CONTENT}}
-  </main>
+  <div class="container" style="max-width:1200px;margin:auto;padding:20px;">
+    <h2>Comparatif : <span>les meilleurs casques Bluetooth pour ados</span></h2>
+    <p>Les casques Bluetooth sans fil offrent aujourd’hui une excellente autonomie, un confort durable et un son immersif. Pour les adolescents, ils allient liberté de mouvement, design moderne et fiabilité. Découvrez notre sélection 2025 et notre coup de cœur 🏆.</p>
 
-  <!-- ===== FOOTER ===== -->
+    <!-- PRODUITS -->
+    <section class="product-grid">
+      <div class="product-card">
+        <img src="https://data.comparatifcadeau.com/assets/606.svg" alt="comparatif cadeau JBL Tune 520BT">
+        <h3>JBL Tune 520BT</h3>
+        <p class="price">45 €</p>
+        <p>57 h — Léger, pliable, Bluetooth 5.3</p>
+        <p class="rating">⭐️ 4,6 / 5 (142 avis)</p>
+        <a class="btn" href="https://amzn.to/3W2aaCQ" target="_blank" rel="nofollow noopener">Voir le produit</a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://data.comparatifcadeau.com/assets/607.svg" alt="comparatif cadeau JBL Tune 720BT">
+        <h3>JBL Tune 720BT</h3>
+        <p class="price">58 €</p>
+        <p>76 h — Autonomie record, multi-connexion, charge rapide</p>
+        <p class="rating">⭐️ 4,7 / 5 (189 avis)</p>
+        <a class="btn" href="https://amzn.to/46MdE2q" target="_blank" rel="nofollow noopener">Voir le produit</a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://data.comparatifcadeau.com/assets/608.svg" alt="comparatif cadeau JBL Tune 670NC">
+        <h3>JBL Tune 670NC</h3>
+        <p class="price">62 €</p>
+        <p>50 h — Réduction active du bruit, mode filaire</p>
+        <p class="rating">⭐️ 4,8 / 5 (122 avis)</p>
+        <a class="btn" href="https://amzn.to/4oaNhcg" target="_blank" rel="nofollow noopener">Voir le produit</a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://data.comparatifcadeau.com/assets/609.svg" alt="comparatif cadeau JBL Tune 770NC">
+        <h3>JBL Tune 770NC</h3>
+        <p class="price">70 €</p>
+        <p>70 h — ANC efficace, son riche, appli JBL</p>
+        <p class="rating">⭐️ 4,9 / 5 (215 avis)</p>
+        <a class="btn" href="https://amzn.to/4qeu9Mv" target="_blank" rel="nofollow noopener">Voir le produit</a>
+      </div>
+    </section>
+
+    <!-- COUP DE CŒUR -->
+    <h2>Notre coup <span>de cœur 🏆</span></h2>
+    <div class="coup-coeur">
+      <strong>JBL Tune 720BT</strong> — Autonomie et confort à toute épreuve
+      <ul style="list-style:none;padding:0;margin:10px 0 0;">
+        <li>✔️ 76 h d’autonomie</li>
+        <li>✔️ Bluetooth 5.3 + multipoint</li>
+        <li>✔️ Recharge rapide : 5 min = 3 h d’écoute</li>
+      </ul>
+    </div>
+
+    <!-- ACCORDÉONS -->
+    <h2>Détails sur <span>chaque modèle</span></h2>
+    <details open>
+      <summary>JBL Tune 520BT</summary>
+      <ul><li>Autonomie : 57 h</li><li>Bluetooth 5.3</li><li>Poids : 157 g</li><li>Égaliseur via appli JBL</li></ul>
+    </details>
+    <details>
+      <summary>JBL Tune 720BT</summary>
+      <ul><li>Autonomie : 76 h</li><li>Charge rapide : 5 min = 3 h</li><li>Multipoint + câble détachable</li><li>Confort longue durée</li></ul>
+    </details>
+    <details>
+      <summary>JBL Tune 670NC</summary>
+      <ul><li>ANC + mode ambiant</li><li>Autonomie ~50 h avec ANC</li><li>Bluetooth 5.3 + mode filaire</li></ul>
+    </details>
+    <details>
+      <summary>JBL Tune 770NC</summary>
+      <ul><li>ANC efficace</li><li>Autonomie : 70 h</li><li>Appli JBL Headphones</li><li>Design pliable</li></ul>
+    </details>
+  </div>
+
+  <!-- FOOTER -->
   <footer class="footer">
     <p>© 2025 <strong>Comparatif Cadeau</strong> – Tous droits réservés</p>
     <p>Un site édité par <strong>Efficience – Alexandre Haller</strong>, Entrepreneur Individuel (SIREN 819 719 774)<br>
@@ -124,6 +215,5 @@
 
     <p>📧 comparateurcadeau@gmail.com</p>
   </footer>
-
 </body>
 </html>
