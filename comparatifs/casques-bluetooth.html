@@ -100,12 +100,44 @@
     .footer a:hover{text-decoration:underline;}
     .footer em{font-style:italic;}
 
+    /* CATÉGORIES */
+    .categories{
+      text-align:center;
+      margin:60px 0;
+    }
+    .category-grid{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:25px;
+      margin-top:30px;
+    }
+    .category-card{
+      width:210px;
+      background:#111;
+      border-radius:10px;
+      overflow:hidden;
+      transition:transform 0.3s;
+      text-decoration:none;
+      color:#fff;
+    }
+    .category-card img{
+      width:100%;
+      height:150px;
+      object-fit:cover;
+      background:#fff;
+    }
+    .category-card div{
+      padding:12px 0;
+      font-weight:bold;
+    }
+    .category-card:hover{transform:scale(1.05);}
+
     @media(max-width:768px){
       .header-hero{flex-direction:column;text-align:center;}
       h1{font-size:2rem;}
       h2{font-size:1.6rem;}
     }
-    a div:hover{transform:scale(1.05);}
   </style>
 </head>
 
@@ -192,41 +224,39 @@
         <li>Recharge rapide : 5 min = 3 h d’écoute</li>
       </ul>
       <p>👉 Idéal pour une écoute prolongée sans fatigue, avec un rapport qualité-prix imbattable.</p>
+      <div style="text-align:center;margin-top:20px;">
+        <a href="https://amzn.to/46MdE2q" target="_blank" rel="nofollow noopener" 
+           style="background:#d21a28;color:#fff;padding:12px 30px;border-radius:6px;font-weight:bold;text-decoration:none;">
+           🎧 JE VEUX L’ACHETER
+        </a>
+      </div>
     </details>
 
     <!-- NAVIGATION CATÉGORIE -->
-    <section style="text-align:center;margin:60px 0;">
+    <section class="categories">
       <h2 style="font-size:1.8rem;font-weight:900;text-transform:none;">
         Retrouvez tous les <span style="color:#d21a28;">produits de la catégorie</span>
       </h2>
-      <div style="display:flex;justify-content:center;flex-wrap:wrap;gap:20px;margin-top:30px;">
+      <div class="category-grid">
 
-        <a href="https://www.comparatif-cadeau.com" target="_blank" rel="noopener" style="text-decoration:none;color:#fff;">
-          <div style="background:#111;border-radius:8px;overflow:hidden;width:200px;transition:transform 0.3s;">
-            <img src="https://data.comparatifcadeau.com/assets/logo-comparatif-cadeau.png" alt="comparatif cadeau" style="width:100%;background:#fff;padding:30px 0;">
-            <div style="padding:10px 0;font-weight:bold;">Retour à la maison</div>
-          </div>
+        <a href="https://www.comparatif-cadeau.com" target="_blank" rel="noopener" class="category-card">
+          <img src="https://data.comparatifcadeau.com/assets/logo-comparatif-cadeau.png" alt="comparatif cadeau">
+          <div>Retour à la maison</div>
         </a>
 
-        <a href="https://data.comparatifcadeau.com/comparatifs/idees-cadeaux-bebe.html" style="text-decoration:none;color:#fff;">
-          <div style="background:#111;border-radius:8px;overflow:hidden;width:200px;transition:transform 0.3s;">
-            <img src="https://data.comparatifcadeau.com/assets/bebe.jpg" alt="comparatif cadeau bébé" style="width:100%;height:140px;object-fit:cover;">
-            <div style="padding:10px 0;font-weight:bold;">Idées cadeaux Bébé</div>
-          </div>
+        <a href="https://data.comparatifcadeau.com/comparatifs/idees-cadeaux-bebe.html" class="category-card">
+          <img src="https://data.comparatifcadeau.com/assets/bebe.jpg" alt="comparatif cadeau bébé">
+          <div>Idées cadeaux Bébé</div>
         </a>
 
-        <a href="https://data.comparatifcadeau.com/comparatifs/idees-cadeaux-garcon.html" style="text-decoration:none;color:#fff;">
-          <div style="background:#111;border-radius:8px;overflow:hidden;width:200px;transition:transform 0.3s;">
-            <img src="https://data.comparatifcadeau.com/assets/garcon.jpg" alt="comparatif cadeau garçon" style="width:100%;height:140px;object-fit:cover;">
-            <div style="padding:10px 0;font-weight:bold;">Idées cadeaux Garçon</div>
-          </div>
+        <a href="https://data.comparatifcadeau.com/comparatifs/idees-cadeaux-garcon.html" class="category-card">
+          <img src="https://data.comparatifcadeau.com/assets/garcon.jpg" alt="comparatif cadeau garçon">
+          <div>Idées cadeaux Garçon</div>
         </a>
 
-        <a href="https://data.comparatifcadeau.com/comparatifs/idees-cadeaux-fille.html" style="text-decoration:none;color:#fff;">
-          <div style="background:#111;border-radius:8px;overflow:hidden;width:200px;transition:transform 0.3s;">
-            <img src="https://data.comparatifcadeau.com/assets/fille.jpg" alt="comparatif cadeau fille" style="width:100%;height:140px;object-fit:cover;">
-            <div style="padding:10px 0;font-weight:bold;">Idées cadeaux Fille</div>
-          </div>
+        <a href="https://data.comparatifcadeau.com/comparatifs/idees-cadeaux-fille.html" class="category-card">
+          <img src="https://data.comparatifcadeau.com/assets/fille.jpg" alt="comparatif cadeau fille">
+          <div>Idées cadeaux Fille</div>
         </a>
 
       </div>
