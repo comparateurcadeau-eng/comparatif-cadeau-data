@@ -26,6 +26,7 @@
     h2 span{color:#d21a28;}
     p{margin:0 0 10px;}
 
+    /* HEADER */
     .header-hero{
       display:flex;
       align-items:center;
@@ -39,18 +40,7 @@
     .header-hero img{width:180px;height:auto;}
     .hero-text p span{color:#d21a28;}
 
-    /* SECTION MOCKUP GLOBAL */
-    .mockup-global{
-      text-align:center;
-      margin:40px 0;
-    }
-    .mockup-global img{
-      width:90%;
-      max-width:1100px;
-      border-radius:12px;
-      box-shadow:0 0 20px rgba(255,255,255,0.1);
-    }
-
+    /* PRODUITS */
     .product-grid{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -67,10 +57,9 @@
     }
     .product-card img{
       width:100%;
-      height:220px;
+      height:180px;
       object-fit:contain;
       margin-bottom:15px;
-      border-radius:8px;
     }
     .price{font-size:1.8rem;font-weight:900;margin:4px 0;}
     .rating{color:#f5b50a;font-size:1.1rem;margin:6px 0;}
@@ -86,6 +75,7 @@
     }
     .btn:hover{background:#b21722;}
 
+    /* ACCORDÉONS */
     details{
       background:#111;
       margin:10px 0;
@@ -96,6 +86,7 @@
     summary{cursor:pointer;font-weight:bold;font-size:1.1rem;}
     summary:hover{color:#d21a28;}
 
+    /* FOOTER */
     .footer{
       background:#000;
       color:#aaa;
@@ -109,6 +100,7 @@
     .footer a:hover{text-decoration:underline;}
     .footer em{font-style:italic;}
 
+    /* CATÉGORIES */
     .categories{
       text-align:center;
       margin:60px 0;
@@ -121,22 +113,26 @@
       margin-top:30px;
     }
     .category-card{
-      width:220px;
+      width:210px;
       background:#111;
       border-radius:10px;
       overflow:hidden;
       transition:transform 0.3s;
-      color:#fff;
       text-decoration:none;
+      color:#fff;
     }
-    .category-card:hover{transform:scale(1.05);}
     .category-card img{
       width:100%;
       height:150px;
       object-fit:cover;
       background:#fff;
     }
-    .category-card div{padding:12px 0;font-weight:bold;}
+    .category-card div{
+      padding:12px 0;
+      font-weight:bold;
+    }
+    .category-card:hover{transform:scale(1.05);}
+
     @media(max-width:768px){
       .header-hero{flex-direction:column;text-align:center;}
       h1{font-size:2rem;}
@@ -156,11 +152,6 @@
     </div>
   </section>
 
-  <!-- MOCKUP GLOBAL -->
-  <section class="mockup-global">
-    <img src="https://data.comparatifcadeau.com/assets/mockups/mockup-global.jpg" alt="comparatif cadeau mockup global">
-  </section>
-
   <div class="container" style="max-width:1200px;margin:auto;padding:20px;">
     <h2>Comparatif : <span>les meilleurs casques Bluetooth pour ados</span></h2>
     <p>Les casques Bluetooth sans fil offrent aujourd’hui une excellente autonomie, un confort durable et un son immersif. Pour les adolescents, ils allient liberté de mouvement, design moderne et fiabilité. Découvrez notre sélection 2025 et notre coup de cœur 🏆.</p>
@@ -168,7 +159,7 @@
     <!-- PRODUITS -->
     <section class="product-grid">
       <div class="product-card">
-        <img src="https://data.comparatifcadeau.com/assets/mockups/mockup-1.jpg" alt="comparatif cadeau JBL Tune 520BT">
+        <img src="https://data.comparatifcadeau.com/assets/606.svg" alt="comparatif cadeau JBL Tune 520BT">
         <h3>JBL Tune 520BT</h3>
         <p class="price">45 €</p>
         <p>57 h — Léger, pliable, Bluetooth 5.3</p>
@@ -177,7 +168,7 @@
       </div>
 
       <div class="product-card">
-        <img src="https://data.comparatifcadeau.com/assets/mockups/mockup-2.jpg" alt="comparatif cadeau JBL Tune 720BT">
+        <img src="https://data.comparatifcadeau.com/assets/607.svg" alt="comparatif cadeau JBL Tune 720BT">
         <h3>JBL Tune 720BT</h3>
         <p class="price">58 €</p>
         <p>76 h — Autonomie record, multi-connexion, charge rapide</p>
@@ -186,7 +177,7 @@
       </div>
 
       <div class="product-card">
-        <img src="https://data.comparatifcadeau.com/assets/mockups/mockup-3.jpg" alt="comparatif cadeau JBL Tune 670NC">
+        <img src="https://data.comparatifcadeau.com/assets/608.svg" alt="comparatif cadeau JBL Tune 670NC">
         <h3>JBL Tune 670NC</h3>
         <p class="price">62 €</p>
         <p>50 h — Réduction active du bruit, mode filaire</p>
@@ -195,7 +186,7 @@
       </div>
 
       <div class="product-card">
-        <img src="https://data.comparatifcadeau.com/assets/mockups/mockup-4.jpg" alt="comparatif cadeau JBL Tune 770NC">
+        <img src="https://data.comparatifcadeau.com/assets/609.svg" alt="comparatif cadeau JBL Tune 770NC">
         <h3>JBL Tune 770NC</h3>
         <p class="price">70 €</p>
         <p>70 h — ANC efficace, son riche, appli JBL</p>
@@ -204,7 +195,26 @@
       </div>
     </section>
 
-    <!-- COUP DE CŒUR -->
+    <!-- ACCORDÉONS -->
+    <h2>Détails sur <span>chaque modèle</span></h2>
+    <details open>
+      <summary>JBL Tune 520BT</summary>
+      <ul><li>Autonomie : 57 h</li><li>Bluetooth 5.3</li><li>Poids : 157 g</li><li>Égaliseur via appli JBL</li></ul>
+    </details>
+    <details>
+      <summary>JBL Tune 720BT</summary>
+      <ul><li>Autonomie : 76 h</li><li>Charge rapide : 5 min = 3 h</li><li>Multipoint + câble détachable</li><li>Confort longue durée</li></ul>
+    </details>
+    <details>
+      <summary>JBL Tune 670NC</summary>
+      <ul><li>ANC + mode ambiant</li><li>Autonomie ~50 h avec ANC</li><li>Bluetooth 5.3 + mode filaire</li></ul>
+    </details>
+    <details>
+      <summary>JBL Tune 770NC</summary>
+      <ul><li>ANC efficace</li><li>Autonomie : 70 h</li><li>Appli JBL Headphones</li><li>Design pliable</li></ul>
+    </details>
+
+    <!-- COUP DE COEUR EN ACCORDÉON -->
     <h2>Notre coup <span>de cœur 🏆</span></h2>
     <details open>
       <summary>❤️ JBL Tune 720BT — Autonomie et confort à toute épreuve</summary>
@@ -213,42 +223,42 @@
         <li>Confort enveloppant et design robuste</li>
         <li>Recharge rapide : 5 min = 3 h d’écoute</li>
       </ul>
-      <p style="text-align:center;">
+      <p>👉 Idéal pour une écoute prolongée sans fatigue, avec un rapport qualité-prix imbattable.</p>
+      <div style="text-align:center;margin-top:20px;">
         <a href="https://amzn.to/46MdE2q" target="_blank" rel="nofollow noopener" 
-           style="background:#d21a28;color:#fff;padding:12px 30px;border-radius:6px;font-weight:bold;text-decoration:none;display:inline-block;margin-top:10px;">
+           style="background:#d21a28;color:#fff;padding:12px 30px;border-radius:6px;font-weight:bold;text-decoration:none;">
            🎧 JE VEUX L’ACHETER
         </a>
-      </p>
+      </div>
     </details>
 
-    <!-- CATÉGORIES -->
+    <!-- NAVIGATION CATÉGORIE -->
     <section class="categories">
-      <h2 style="font-size:1.8rem;font-weight:900;text-transform:none;margin-bottom:20px;">
-        <a href="https://www.amazon.fr/s?k=CASQUES+ADO" target="_blank" rel="nofollow noopener" style="color:#fff;text-decoration:none;">
-          Retrouvez tous les <span style="color:#d21a28;">produits de la catégorie</span>
-        </a>
+      <h2 style="font-size:1.8rem;font-weight:900;text-transform:none;">
+        Retrouvez tous les <span style="color:#d21a28;">produits de la catégorie</span>
       </h2>
-
       <div class="category-grid">
+
         <a href="https://www.comparatif-cadeau.com" target="_blank" rel="noopener" class="category-card">
-          <img src="https://data.comparatifcadeau.com/assets/mockups/mockup-home.jpg" alt="comparatif cadeau retour accueil">
+          <img src="https://data.comparatifcadeau.com/assets/logo-comparatif-cadeau.png" alt="comparatif cadeau">
           <div>Retour à la maison</div>
         </a>
 
         <a href="https://data.comparatifcadeau.com/comparatifs/idees-cadeaux-bebe.html" class="category-card">
-          <img src="https://data.comparatifcadeau.com/assets/mockups/mockup-bebe.jpg" alt="comparatif cadeau bébé">
+          <img src="https://data.comparatifcadeau.com/assets/bebe.jpg" alt="comparatif cadeau bébé">
           <div>Idées cadeaux Bébé</div>
         </a>
 
         <a href="https://data.comparatifcadeau.com/comparatifs/idees-cadeaux-garcon.html" class="category-card">
-          <img src="https://data.comparatifcadeau.com/assets/mockups/mockup-garcon.jpg" alt="comparatif cadeau garçon">
+          <img src="https://data.comparatifcadeau.com/assets/garcon.jpg" alt="comparatif cadeau garçon">
           <div>Idées cadeaux Garçon</div>
         </a>
 
         <a href="https://data.comparatifcadeau.com/comparatifs/idees-cadeaux-fille.html" class="category-card">
-          <img src="https://data.comparatifcadeau.com/assets/mockups/mockup-fille.jpg" alt="comparatif cadeau fille">
+          <img src="https://data.comparatifcadeau.com/assets/fille.jpg" alt="comparatif cadeau fille">
           <div>Idées cadeaux Fille</div>
         </a>
+
       </div>
     </section>
   </div>
@@ -269,3 +279,4 @@
   </footer>
 </body>
 </html>
+
